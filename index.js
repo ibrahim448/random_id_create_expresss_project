@@ -3,12 +3,11 @@ const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 4000;
 const userRoute = require("./routes/userRoute");
-const productRouter = require("./routes/productRoute");
+
 
 
 app.use(express.urlencoded({extends: true}));
 app.use(userRoute);
-app.use(productRouter);
 
 
 
